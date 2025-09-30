@@ -168,6 +168,55 @@
         .milestone-name {
             font-weight: 600;
             font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+            cursor: help;
+            position: relative;
+        }
+
+        .info-icon:hover .tooltip {
+            display: block;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            width: 250px;
+            z-index: 1000;
+            font-weight: normal;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #333;
         }
 
         .milestone-amount {
@@ -430,7 +479,12 @@
                 <h2 style="margin-bottom: 20px; color: #667eea;">Your Milestones</h2>
                 <div class="milestone" id="coastFI">
                     <div class="milestone-info">
-                        <div class="milestone-name">Coast FI</div>
+                        <div class="milestone-name">
+                            Coast FI
+                            <span class="info-icon">i
+                                <span class="tooltip">You have enough invested that compound growth will reach your FI number by traditional retirement age (assuming no additional contributions)</span>
+                            </span>
+                        </div>
                         <div class="milestone-amount" id="coastAmount">$0</div>
                         <div class="milestone-years" id="coastYears"></div>
                     </div>
@@ -438,7 +492,12 @@
                 </div>
                 <div class="milestone" id="leanFI">
                     <div class="milestone-info">
-                        <div class="milestone-name">Lean FI</div>
+                        <div class="milestone-name">
+                            Lean FI
+                            <span class="info-icon">i
+                                <span class="tooltip">75% of your target FI number. Requires a more frugal lifestyle with less margin for error (18.75x annual expenses)</span>
+                            </span>
+                        </div>
                         <div class="milestone-amount" id="leanAmount">$0</div>
                         <div class="milestone-years" id="leanYears"></div>
                     </div>
@@ -446,7 +505,12 @@
                 </div>
                 <div class="milestone" id="fullFI">
                     <div class="milestone-info">
-                        <div class="milestone-name">Full FI</div>
+                        <div class="milestone-name">
+                            Full FI
+                            <span class="info-icon">i
+                                <span class="tooltip">Your target FI number using the 4% rule. You can withdraw 4% annually and sustain your planned expenses indefinitely (25x annual expenses)</span>
+                            </span>
+                        </div>
                         <div class="milestone-amount" id="fullAmount">$0</div>
                         <div class="milestone-years" id="fullYears"></div>
                     </div>
@@ -454,7 +518,12 @@
                 </div>
                 <div class="milestone" id="fatFI">
                     <div class="milestone-info">
-                        <div class="milestone-name">Fat FI</div>
+                        <div class="milestone-name">
+                            Fat FI
+                            <span class="info-icon">i
+                                <span class="tooltip">150% of your target FI number. Provides extra cushion for a more comfortable retirement with greater spending flexibility (37.5x annual expenses)</span>
+                            </span>
+                        </div>
                         <div class="milestone-amount" id="fatAmount">$0</div>
                         <div class="milestone-years" id="fatYears"></div>
                     </div>
