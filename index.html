@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -19,7 +18,6 @@
             color: #333;
             transition: background 0.5s ease;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -28,45 +26,38 @@
             padding: 40px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
-
         h1 {
             text-align: center;
             color: #667eea;
             margin-bottom: 10px;
             font-size: 2.5em;
         }
-
         .subtitle {
             text-align: center;
             color: #666;
             margin-bottom: 40px;
             font-size: 1.1em;
         }
-
         .input-section {
             background: rgba(255, 255, 255, 0.7);
             padding: 30px;
             border-radius: 15px;
             margin-bottom: 30px;
         }
-
         .input-group {
             margin-bottom: 25px;
         }
-
         label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: #555;
         }
-
         .helper-text {
             font-size: 0.85em;
             color: #888;
             margin-top: 4px;
         }
-
         input {
             width: 100%;
             padding: 12px;
@@ -75,12 +66,15 @@
             font-size: 16px;
             transition: border-color 0.3s;
         }
-
         input:focus {
             outline: none;
             border-color: #667eea;
         }
-
+        .expense-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
         .calculate-btn {
             width: 100%;
             padding: 15px;
@@ -93,32 +87,26 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
-
         .calculate-btn:hover {
             transform: translateY(-2px);
         }
-
         .results {
             display: none;
         }
-
         .results.active {
             display: block;
         }
-
         .progress-circle {
             width: 250px;
             height: 250px;
             margin: 30px auto;
             position: relative;
         }
-
         .circle-bg {
             fill: none;
             stroke: #e0e0e0;
             stroke-width: 20;
         }
-
         .circle-progress {
             fill: none;
             stroke: url(#dynamicGradient);
@@ -128,7 +116,6 @@
             transform: rotate(-90deg);
             transform-origin: 50% 50%;
         }
-
         .percentage-text {
             position: absolute;
             top: 50%;
@@ -139,11 +126,9 @@
             color: #667eea;
             transition: color 0.5s ease;
         }
-
         .milestone-section {
             margin: 30px 0;
         }
-
         .milestone {
             display: flex;
             justify-content: space-between;
@@ -155,16 +140,13 @@
             border-left: 5px solid #ddd;
             transition: all 0.3s;
         }
-
         .milestone.achieved {
             background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
             border-left-color: #667eea;
         }
-
         .milestone-info {
             flex: 1;
         }
-
         .milestone-name {
             font-weight: 600;
             font-size: 1.1em;
@@ -172,7 +154,6 @@
             align-items: center;
             gap: 8px;
         }
-
         .info-icon {
             display: inline-block;
             width: 16px;
@@ -186,11 +167,9 @@
             cursor: help;
             position: relative;
         }
-
         .info-icon:hover .tooltip {
             display: block;
         }
-
         .tooltip {
             display: none;
             position: absolute;
@@ -208,7 +187,6 @@
             line-height: 1.4;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-
         .tooltip::after {
             content: '';
             position: absolute;
@@ -218,23 +196,19 @@
             border: 6px solid transparent;
             border-top-color: #333;
         }
-
         .milestone-amount {
             color: #666;
             font-size: 0.9em;
         }
-
         .milestone-years {
             color: #888;
             font-size: 0.85em;
             font-style: italic;
             margin-top: 3px;
         }
-
         .milestone-status {
             font-size: 1.5em;
         }
-
         .celebration {
             text-align: center;
             padding: 30px;
@@ -244,18 +218,15 @@
             color: white;
             display: none;
         }
-
         .celebration.show {
             display: block;
             animation: slideIn 0.5s ease;
         }
-
         .celebration-message {
             font-size: 1.3em;
             font-weight: 600;
             margin-bottom: 15px;
         }
-
         .celebration-quote {
             font-size: 1em;
             font-style: italic;
@@ -264,13 +235,11 @@
             padding-top: 15px;
             border-top: 2px solid rgba(255,255,255,0.3);
         }
-
         .quote-author {
             font-size: 0.85em;
             margin-top: 8px;
             opacity: 0.85;
         }
-
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -281,53 +250,45 @@
                 transform: translateY(0);
             }
         }
-
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
-
         .stat-card {
             background: rgba(255, 255, 255, 0.6);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
         }
-
         .stat-value {
             font-size: 2em;
             font-weight: bold;
             color: #667eea;
             margin-bottom: 5px;
         }
-
         .stat-label {
             color: #666;
             font-size: 0.9em;
         }
-
         .progress-tracker {
             margin-top: 40px;
             padding: 30px;
             background: rgba(255, 255, 255, 0.6);
             border-radius: 15px;
         }
-
         .tracker-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-
         .tracker-title {
             font-size: 1.5em;
             font-weight: bold;
             color: #667eea;
         }
-
         .save-progress-btn {
             padding: 10px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -338,16 +299,13 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
-
         .save-progress-btn:hover {
             transform: translateY(-2px);
         }
-
         .history-list {
             max-height: 400px;
             overflow-y: auto;
         }
-
         .history-item {
             display: flex;
             justify-content: space-between;
@@ -358,24 +316,20 @@
             border-radius: 8px;
             border-left: 4px solid #667eea;
         }
-
         .history-date {
             font-weight: 600;
             color: #333;
         }
-
         .history-details {
             display: flex;
             gap: 20px;
             font-size: 0.9em;
             color: #666;
         }
-
         .history-progress {
             font-weight: bold;
             color: #667eea;
         }
-
         .delete-btn {
             background: #ff4757;
             color: white;
@@ -385,18 +339,15 @@
             cursor: pointer;
             font-size: 0.85em;
         }
-
         .delete-btn:hover {
             background: #ff3838;
         }
-
         .empty-state {
             text-align: center;
             color: #999;
             padding: 40px;
             font-style: italic;
         }
-
         .confetti {
             position: fixed;
             width: 10px;
@@ -405,7 +356,6 @@
             position: absolute;
             animation: confetti-fall 3s linear;
         }
-
         @keyframes confetti-fall {
             to {
                 transform: translateY(100vh) rotate(360deg);
@@ -418,34 +368,49 @@
     <div class="container">
         <h1>🔥 FIRE Tracker</h1>
         <p class="subtitle">Track your journey to Financial Independence</p>
-
         <div class="input-section">
             <div class="input-group">
                 <label>Investment Portfolio ($)</label>
                 <input type="number" id="netWorth" placeholder="e.g., 250000">
-                <div class="helper-text">Stocks, bonds, index funds, and retirement accounts (401k, IRA, etc.). Exclude primary residence equity and rental properties.</div>
+                <div class="helper-text">Stocks, bonds, index funds, and retirement accounts. Exclude primary residence equity and rental properties.</div>
             </div>
             <div class="input-group">
-                <label>Monthly Expenses ($)</label>
-                <input type="number" id="monthlyExpenses" placeholder="e.g., 3500">
-                <div class="helper-text">Your target monthly spending when you FIRE (may be different from current expenses)</div>
+                <label>Current Age</label>
+                <input type="number" id="currentAge" placeholder="e.g., 35" min="18" max="100">
+                <div class="helper-text">Used to calculate Coast FI based on growth to retirement age</div>
+            </div>
+            <div class="input-group">
+                <label>Target Retirement Age</label>
+                <input type="number" id="retirementAge" placeholder="e.g., 65" value="65" min="30" max="100">
+                <div class="helper-text">Traditional retirement age for Coast FI calculation</div>
+            </div>
+            <div class="input-group">
+                <label>Expenses (Enter either Monthly or Annual)</label>
+                <div class="expense-inputs">
+                    <input type="number" id="monthlyExpenses" placeholder="Monthly: e.g., 3500">
+                    <input type="number" id="annualExpenses" placeholder="Annual: e.g., 42000">
+                </div>
+                <div class="helper-text">Enter either monthly or annual - the other will auto-calculate. This is your target spending when you FIRE. Note: Taxes are not automatically factored in - adjust your expenses to include expected tax obligations.</div>
             </div>
             <div class="input-group">
                 <label>Monthly Savings ($)</label>
                 <input type="number" id="monthlySavings" placeholder="e.g., 2500">
-                <div class="helper-text">Amount invested each month (into stocks, bonds, retirement accounts, etc.)</div>
+                <div class="helper-text">Amount invested each month into stocks, bonds, retirement accounts, etc.</div>
             </div>
             <div class="input-group">
                 <label>Expected Annual Return (%)</label>
                 <input type="number" id="expectedReturn" placeholder="7" value="7" step="0.1">
-                <div class="helper-text">Historical stock market average is ~7% after inflation. Conservative investors might use 5-6%.</div>
+                <div class="helper-text">Historical stock market average is around 7 percent after inflation. Conservative investors might use 5-6 percent.</div>
             </div>
-            <button class="calculate-btn" onclick="calculate()">Calculate My Progress 🚀</button>
+            <div class="input-group">
+                <label>Withdrawal Rate (%)</label>
+                <input type="number" id="withdrawalRate" placeholder="4" value="4" step="0.1" min="2" max="6">
+                <div class="helper-text">The 4 percent rule is standard. Conservative: 3-3.5 percent, Aggressive: 4.5-5 percent.</div>
+            </div>
+            <button class="calculate-btn" id="calculateBtn">Calculate My Progress 🚀</button>
         </div>
-
         <div class="results" id="results">
             <div class="celebration" id="celebration"></div>
-
             <div class="progress-circle">
                 <svg width="250" height="250">
                     <defs>
@@ -459,11 +424,10 @@
                 </svg>
                 <div class="percentage-text" id="percentage">0%</div>
             </div>
-
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-value" id="fiNumber">$0</div>
-                    <div class="stat-label">FI Number (4% Rule)</div>
+                    <div class="stat-label" id="fiNumberLabel">FI Number</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" id="yearsToFI">--</div>
@@ -474,7 +438,6 @@
                     <div class="stat-label">Savings Rate</div>
                 </div>
             </div>
-
             <div class="milestone-section">
                 <h2 style="margin-bottom: 20px; color: #667eea;">Your Milestones</h2>
                 <div class="milestone" id="coastFI">
@@ -482,7 +445,7 @@
                         <div class="milestone-name">
                             Coast FI
                             <span class="info-icon">i
-                                <span class="tooltip">You have enough invested that compound growth will reach your FI number by traditional retirement age (assuming no additional contributions)</span>
+                                <span class="tooltip">Compound growth will reach your FI number by retirement age with no additional contributions</span>
                             </span>
                         </div>
                         <div class="milestone-amount" id="coastAmount">$0</div>
@@ -495,7 +458,7 @@
                         <div class="milestone-name">
                             Lean FI
                             <span class="info-icon">i
-                                <span class="tooltip">75% of your target FI number. Requires a more frugal lifestyle with less margin for error (18.75x annual expenses)</span>
+                                <span class="tooltip">75 percent of your target FI number. Requires a more frugal lifestyle.</span>
                             </span>
                         </div>
                         <div class="milestone-amount" id="leanAmount">$0</div>
@@ -508,7 +471,7 @@
                         <div class="milestone-name">
                             Full FI
                             <span class="info-icon">i
-                                <span class="tooltip">Your target FI number using the 4% rule. You can withdraw 4% annually and sustain your planned expenses indefinitely (25x annual expenses)</span>
+                                <span class="tooltip">Your target FI number. You can withdraw your chosen percentage annually and sustain expenses indefinitely.</span>
                             </span>
                         </div>
                         <div class="milestone-amount" id="fullAmount">$0</div>
@@ -521,7 +484,7 @@
                         <div class="milestone-name">
                             Fat FI
                             <span class="info-icon">i
-                                <span class="tooltip">150% of your target FI number. Provides extra cushion for a more comfortable retirement with greater spending flexibility (37.5x annual expenses)</span>
+                                <span class="tooltip">150 percent of your target FI number. Extra cushion for comfortable retirement.</span>
                             </span>
                         </div>
                         <div class="milestone-amount" id="fatAmount">$0</div>
@@ -530,299 +493,19 @@
                     <div class="milestone-status">⭕</div>
                 </div>
             </div>
-
             <div class="progress-tracker">
                 <div class="tracker-header">
                     <div class="tracker-title">📊 Progress History</div>
-                    <button class="save-progress-btn" onclick="saveProgress()">Save This Month</button>
+                    <button class="save-progress-btn" id="saveBtn">Save This Month</button>
                 </div>
                 <div class="history-list" id="historyList">
-                    <div class="empty-state">No progress saved yet. Click "Save This Month" to start tracking!</div>
+                    <div class="empty-state">No progress saved yet. Click Save This Month to start tracking!</div>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
-        let progressHistory = [];
-        let currentData = {};
-
-        // Load history from localStorage on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            const saved = localStorage.getItem('fireTrackerHistory');
-            if (saved) {
-                progressHistory = JSON.parse(saved);
-                displayHistory();
-            }
-        });
-
-        function calculate() {
-            const netWorth = parseFloat(document.getElementById('netWorth').value) || 0;
-            const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
-            const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
-            const expectedReturn = parseFloat(document.getElementById('expectedReturn').value) || 7;
-
-            if (netWorth === 0 || monthlyExpenses === 0) {
-                alert('Please enter your investment portfolio value and monthly expenses!');
-                return;
-            }
-
-            const annualExpenses = monthlyExpenses * 12;
-            const annualSavings = monthlySavings * 12;
-
-            const fullFINumber = annualExpenses * 25;
-            const leanFINumber = annualExpenses * 0.75 * 25;
-            const fatFINumber = annualExpenses * 1.5 * 25;
-            const coastFINumber = fullFINumber * 0.5;
-
-            const progressPercent = Math.min((netWorth / fullFINumber) * 100, 100);
-
-            let yearsToFI = '--';
-            if (annualSavings > 0) {
-                const remainingNeeded = fullFINumber - netWorth;
-                if (remainingNeeded <= 0) {
-                    yearsToFI = '0';
-                } else {
-                    const returnRate = expectedReturn / 100;
-                    let years = 0;
-                    let currentValue = netWorth;
-                    while (currentValue < fullFINumber && years < 100) {
-                        currentValue = currentValue * (1 + returnRate) + annualSavings;
-                        years++;
-                    }
-                    yearsToFI = years < 100 ? years.toFixed(1) : '99+';
-                }
-            }
-
-            const monthlyIncome = monthlyExpenses + monthlySavings;
-            const savingsRate = monthlyIncome > 0 ? ((monthlySavings / monthlyIncome) * 100).toFixed(1) : 0;
-
-            currentData = {
-                netWorth: netWorth,
-                monthlyExpenses: monthlyExpenses,
-                monthlySavings: monthlySavings,
-                expectedReturn: expectedReturn,
-                progressPercent: progressPercent,
-                fullFINumber: fullFINumber
-            };
-
-            document.getElementById('results').classList.add('active');
-            document.getElementById('percentage').textContent = progressPercent.toFixed(1) + '%';
-            document.getElementById('fiNumber').textContent = '$' + fullFINumber.toLocaleString();
-            document.getElementById('yearsToFI').textContent = yearsToFI;
-            document.getElementById('savingsRate').textContent = savingsRate + '%';
-
-            updateColors(progressPercent);
-
-            const circle = document.getElementById('progressCircle');
-            const circumference = 2 * Math.PI * 100;
-            const offset = circumference - (progressPercent / 100) * circumference;
-            circle.style.strokeDasharray = circumference;
-            circle.style.strokeDashoffset = offset;
-
-            updateMilestone('coastFI', 'coastAmount', 'coastYears', coastFINumber, netWorth, annualSavings, expectedReturn);
-            updateMilestone('leanFI', 'leanAmount', 'leanYears', leanFINumber, netWorth, annualSavings, expectedReturn);
-            updateMilestone('fullFI', 'fullAmount', 'fullYears', fullFINumber, netWorth, annualSavings, expectedReturn);
-            updateMilestone('fatFI', 'fatAmount', 'fatYears', fatFINumber, netWorth, annualSavings, expectedReturn);
-
-            showCelebration(progressPercent);
-        }
-
-        function updateColors(percent) {
-            let startColor, endColor, bgGradient, textColor;
-
-            if (percent < 25) {
-                startColor = '#667eea';
-                endColor = '#764ba2';
-                bgGradient = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                textColor = '#667eea';
-            } else if (percent < 50) {
-                startColor = '#4facfe';
-                endColor = '#00f2fe';
-                bgGradient = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
-                textColor = '#00bcd4';
-            } else if (percent < 75) {
-                startColor = '#43e97b';
-                endColor = '#38f9d7';
-                bgGradient = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
-                textColor = '#00c853';
-            } else if (percent < 100) {
-                startColor = '#fa709a';
-                endColor = '#fee140';
-                bgGradient = 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)';
-                textColor = '#ff6b35';
-            } else {
-                startColor = '#f7971e';
-                endColor = '#ffd200';
-                bgGradient = 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)';
-                textColor = '#f39c12';
-            }
-
-            document.getElementById('gradientStart').style.stopColor = startColor;
-            document.getElementById('gradientEnd').style.stopColor = endColor;
-            document.body.style.background = bgGradient;
-            document.getElementById('percentage').style.color = textColor;
-            
-            const statValues = document.querySelectorAll('.stat-value');
-            for (let i = 0; i < statValues.length; i++) {
-                statValues[i].style.color = textColor;
-            }
-            
-            document.querySelector('h1').style.color = textColor;
-            document.querySelector('.tracker-title').style.color = textColor;
-        }
-
-        function updateMilestone(elementId, amountId, yearsId, targetAmount, currentAmount, annualSavings, returnRate) {
-            const element = document.getElementById(elementId);
-            const amountElement = document.getElementById(amountId);
-            const yearsElement = document.getElementById(yearsId);
-            const statusElement = element.querySelector('.milestone-status');
-
-            amountElement.textContent = '$' + targetAmount.toLocaleString();
-
-            let yearsToMilestone = '';
-            if (currentAmount >= targetAmount) {
-                yearsToMilestone = 'Achieved!';
-                element.classList.add('achieved');
-                statusElement.textContent = '✅';
-            } else {
-                element.classList.remove('achieved');
-                statusElement.textContent = '⭕';
-                
-                if (annualSavings > 0) {
-                    const returnRateDecimal = returnRate / 100;
-                    let years = 0;
-                    let portfolioValue = currentAmount;
-                    while (portfolioValue < targetAmount && years < 100) {
-                        portfolioValue = portfolioValue * (1 + returnRateDecimal) + annualSavings;
-                        years++;
-                    }
-                    yearsToMilestone = years < 100 ? years.toFixed(1) + ' years away' : '99+ years';
-                } else {
-                    yearsToMilestone = 'Add savings to calculate';
-                }
-            }
-
-            yearsElement.textContent = yearsToMilestone;
-        }
-
-        function showCelebration(percent) {
-            const celebration = document.getElementById('celebration');
-            let message = '';
-            let quote = '';
-            let author = '';
-
-            if (percent >= 100) {
-                message = '🎉 CONGRATULATIONS! You have achieved Financial Independence! 🎉';
-                quote = 'The ability to do what you want, when you want, with who you want, for as long as you want, is priceless. It is the highest dividend money pays.';
-                author = 'Morgan Housel, The Psychology of Money';
-                createConfetti();
-            } else if (percent >= 75) {
-                message = '🔥 You are in the home stretch! 75% there!';
-                quote = 'Spending money to show people how much money you have is the fastest way to have less money.';
-                author = 'Morgan Housel';
-            } else if (percent >= 50) {
-                message = '💪 Halfway to FI! Keep up the amazing work!';
-                quote = 'The best way to achieve wealth is through simplicity and avoiding the comparison game.';
-                author = 'J.L. Collins';
-            } else if (percent >= 25) {
-                message = '🌟 You are 25% of the way! Great progress!';
-                quote = 'Wealth is what you do not see. It is the cars not purchased, the diamonds not bought, the renovations postponed, the clothes forgone.';
-                author = 'Morgan Housel';
-            } else if (percent > 0) {
-                message = '🚀 Your FIRE journey has begun!';
-            }
-
-            if (message) {
-                let html = '<div class="celebration-message">' + message + '</div>';
-                if (quote) {
-                    html += '<div class="celebration-quote">"' + quote + '"<div class="quote-author">— ' + author + '</div></div>';
-                }
-                celebration.innerHTML = html;
-                celebration.classList.add('show');
-            }
-        }
-
-        function saveProgress() {
-            if (!currentData.netWorth) {
-                alert('Please calculate your progress first!');
-                return;
-            }
-
-            const now = new Date();
-            const monthYear = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-
-            const entry = {
-                id: Date.now(),
-                date: monthYear,
-                timestamp: now.getTime(),
-                netWorth: currentData.netWorth,
-                progressPercent: currentData.progressPercent,
-                fiNumber: currentData.fullFINumber
-            };
-
-            progressHistory.unshift(entry);
-            localStorage.setItem('fireTrackerHistory', JSON.stringify(progressHistory));
-            displayHistory();
-            
-            alert('Progress saved for ' + monthYear + '!');
-        }
-
-        function displayHistory() {
-            const historyList = document.getElementById('historyList');
-            
-            if (progressHistory.length === 0) {
-                historyList.innerHTML = '<div class="empty-state">No progress saved yet. Click "Save This Month" to start tracking!</div>';
-                return;
-            }
-
-            let html = '';
-            for (let i = 0; i < progressHistory.length; i++) {
-                const entry = progressHistory[i];
-                html += '<div class="history-item">';
-                html += '<div>';
-                html += '<div class="history-date">' + entry.date + '</div>';
-                html += '<div class="history-details">';
-                html += '<span>Portfolio: $' + entry.netWorth.toLocaleString() + '</span>';
-                html += '<span class="history-progress">' + entry.progressPercent.toFixed(1) + '% to FI</span>';
-                html += '</div>';
-                html += '</div>';
-                html += '<button class="delete-btn" onclick="deleteEntry(' + entry.id + ')">Delete</button>';
-                html += '</div>';
-            }
-            historyList.innerHTML = html;
-        }
-
-        function deleteEntry(id) {
-            if (confirm('Delete this entry?')) {
-                const newHistory = [];
-                for (let i = 0; i < progressHistory.length; i++) {
-                    if (progressHistory[i].id !== id) {
-                        newHistory.push(progressHistory[i]);
-                    }
-                }
-                progressHistory = newHistory;
-                localStorage.setItem('fireTrackerHistory', JSON.stringify(progressHistory));
-                displayHistory();
-            }
-        }
-
-        function createConfetti() {
-            const colors = ['#f7971e', '#ffd200', '#ff6b35', '#fee140'];
-            for (let i = 0; i < 50; i++) {
-                setTimeout(function() {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * 100 + '%';
-                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.animationDelay = Math.random() * 0.5 + 's';
-                    document.body.appendChild(confetti);
-                    setTimeout(function() {
-                        confetti.remove();
-                    }, 3000);
-                }, i * 30);
-            }
-        }
+var progressHistory=[];var currentData={};var saved=localStorage.getItem("fireTrackerHistory");if(saved){progressHistory=JSON.parse(saved);displayHistory()}document.getElementById("monthlyExpenses").addEventListener("input",function(){var a=parseFloat(this.value);if(a>0){document.getElementById("annualExpenses").value=(a*12).toFixed(0)}});document.getElementById("annualExpenses").addEventListener("input",function(){var a=parseFloat(this.value);if(a>0){document.getElementById("monthlyExpenses").value=(a/12).toFixed(0)}});document.getElementById("calculateBtn").addEventListener("click",calculate);document.getElementById("saveBtn").addEventListener("click",saveProgress);function calculate(){var a=parseFloat(document.getElementById("netWorth").value)||0;var b=parseFloat(document.getElementById("currentAge").value)||0;var c=parseFloat(document.getElementById("retirementAge").value)||65;var d=parseFloat(document.getElementById("monthlyExpenses").value)||0;var e=parseFloat(document.getElementById("annualExpenses").value)||0;var f=parseFloat(document.getElementById("monthlySavings").value)||0;var g=parseFloat(document.getElementById("expectedReturn").value)||7;var h=parseFloat(document.getElementById("withdrawalRate").value)||4;if(a===0){alert("Please enter your investment portfolio value!");return}var i=e;if(d>0&&e===0){i=d*12}if(i===0){alert("Please enter either monthly or annual expenses!");return}var j=f*12;var k=i/(h/100);var l=i*0.75/(h/100);var m=i*1.5/(h/100);var n;if(b>0&&b<c){var o=c-b;var p=g/100;n=k/Math.pow(1+p,o)}else{n=k*0.5}var q=Math.min(a/k*100,100);var r="--";if(j>0){var s=k-a;if(s<=0){r="0"}else{var t=g/100;var u=0;var v=a;while(v<k&&u<100){v=v*(1+t)+j;u++}r=u<100?u.toFixed(1):"99+"}}var w=i/12+f;var x=w>0?(f/w*100).toFixed(1):0;currentData={netWorth:a,annualExpenses:i,monthlySavings:f,expectedReturn:g,withdrawalRate:h,progressPercent:q,fullFINumber:k};document.getElementById("results").classList.add("active");document.getElementById("percentage").textContent=q.toFixed(2)+"%";document.getElementById("fiNumber").textContent="$"+k.toLocaleString();document.getElementById("fiNumberLabel").textContent="FI Number ("+h+"% Rule)";document.getElementById("yearsToFI").textContent=r;document.getElementById("savingsRate").textContent=x+"%";updateColors(q);var y=document.getElementById("progressCircle");var z=2*Math.PI*100;var A=z-q/100*z;y.style.strokeDasharray=z;y.style.strokeDashoffset=A;updateMilestone("coastFI","coastAmount","coastYears",n,a,j,g);updateMilestone("leanFI","leanAmount","leanYears",l,a,j,g);updateMilestone("fullFI","fullAmount","fullYears",k,a,j,g);updateMilestone("fatFI","fatAmount","fatYears",m,a,j,g);showCelebration(q)}function updateColors(a){var b,c,d,e;if(a<25){b="#667eea";c="#764ba2";d="linear-gradient(135deg, #667eea 0%, #764ba2 100%)";e="#667eea"}else if(a<50){b="#4facfe";c="#00f2fe";d="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)";e="#00bcd4"}else if(a<75){b="#43e97b";c="#38f9d7";d="linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)";e="#00c853"}else if(a<100){b="#fa709a";c="#fee140";d="linear-gradient(135deg, #fa709a 0%, #fee140 100%)";e="#ff6b35"}else{b="#f7971e";c="#ffd200";d="linear-gradient(135deg, #f7971e 0%, #ffd200 100%)";e="#f39c12"}document.getElementById("gradientStart").style.stopColor=b;document.getElementById("gradientEnd").style.stopColor=c;document.body.style.background=d;document.getElementById("percentage").style.color=e;var f=document.querySelectorAll(".stat-value");for(var g=0;g<f.length;g++){f[g].style.color=e}document.querySelector("h1").style.color=e;document.querySelector(".tracker-title").style.color=e}function updateMilestone(a,b,c,d,e,f,g){var h=document.getElementById(a);var i=document.getElementById(b);var j=document.getElementById(c);var k=h.querySelector(".milestone-status");i.textContent="$"+d.toLocaleString();var l="";if(e>=d){l="Achieved!";h.classList.add("achieved");k.textContent="✅"}else{h.classList.remove("achieved");k.textContent="⭕";if(f>0){var m=g/100;var n=0;var o=e;while(o<d&&n<100){o=o*(1+m)+f;n++}l=n<100?n.toFixed(1)+" years away":"99+ years"}else{l="Add savings to calculate"}}j.textContent=l}function showCelebration(a){var b=document.getElementById("celebration");var c="";var d="";var e="";if(a>=100){c="🎉 CONGRATULATIONS! You have achieved Financial Independence! 🎉";d="The ability to do what you want, when you want, with who you want, for as long as you want, is priceless. It is the highest dividend money pays.";e="Morgan Housel";createConfetti()}else if(a>=75){c="🔥 You are in the home stretch! 75% there!";d="Spending money to show people how much money you have is the fastest way to have less money.";e="Morgan Housel"}else if(a>=50){c="💪 Halfway to FI! Keep up the amazing work!";d="The best way to achieve wealth is through simplicity and avoiding the comparison game.";e="J.L. Collins"}else if(a>=25){c="🌟 You are 25% of the way! Great progress!";d="Wealth is what you do not see.";e="Morgan Housel"}else if(a>0){c="🚀 Your FIRE journey has begun!"}if(c){var f='<div class="celebration-message">'+c+"</div>";if(d){f+='<div class="celebration-quote">"'+d+'"<div class="quote-author">— '+e+"</div></div>"}b.innerHTML=f;b.classList.add("show")}}function saveProgress(){if(!currentData.netWorth){alert("Please calculate your progress first!");return}var a=new Date();var b=a.toLocaleDateString("en-US",{month:"long",year:"numeric"});var c={id:Date.now(),date:b,timestamp:a.getTime(),netWorth:currentData.netWorth,progressPercent:currentData.progressPercent,fiNumber:currentData.fullFINumber};progressHistory.unshift(c);localStorage.setItem("fireTrackerHistory",JSON.stringify(progressHistory));displayHistory();alert("Progress saved for "+b+"!")}function displayHistory(){var a=document.getElementById("historyList");if(progressHistory.length===0){a.innerHTML='<div class="empty-state">No progress saved yet. Click Save This Month to start tracking!</div>';return}var b="";for(var c=0;c<progressHistory.length;c++){var d=progressHistory[c];b+='<div class="history-item">';b+="<div>";b+='<div class="history-date">'+d.date+"</div>";b+='<div class="history-details">';b+="<span>Portfolio: $"+d.netWorth.toLocaleString()+"</span>";b+='<span class="history-progress">'+d.progressPercent.toFixed(2)+"% to FI</span>";b+="</div>";b+="</div>";b+='<button class="delete-btn" onclick="deleteEntry('+d.id+')">Delete</button>';b+="</div>"}a.innerHTML=b}function deleteEntry(a){if(confirm("Delete this entry?")){var b=[];for(var c=0;c<progressHistory.length;c++){if(progressHistory[c].id!==a){b.push(progressHistory[c])}}progressHistory=b;localStorage.setItem("fireTrackerHistory",JSON.stringify(progressHistory));displayHistory()}}function createConfetti(){var a=["#f7971e","#ffd200","#ff6b35","#fee140"];for(var b=0;b<50;b++){setTimeout(function(){var b=document.createElement("div");b.className="confetti";b.style.left=Math.random()*100+"%";b.style.background=a[Math.floor(Math.random()*a.length)];b.style.animationDelay=Math.random()*0.5+"s";document.body.appendChild(b);setTimeout(function(){b.remove()},3e3)},b*30)}}
     </script>
 </body>
 </html>
