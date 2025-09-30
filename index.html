@@ -478,6 +478,15 @@
         let progressHistory = [];
         let currentData = {};
 
+        // Load history from localStorage on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('fireTrackerHistory');
+            if (saved) {
+                progressHistory = JSON.parse(saved);
+                displayHistory();
+            }
+        });
+
         function calculate() {
             const netWorth = parseFloat(document.getElementById('netWorth').value) || 0;
             const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
@@ -684,6 +693,7 @@
             };
 
             progressHistory.unshift(entry);
+            localStorage.setItem('fireTrackerHistory', JSON.stringify(progressHistory));
             displayHistory();
             
             alert('Progress saved for ' + monthYear + '!');
@@ -723,6 +733,7 @@
                     }
                 }
                 progressHistory = newHistory;
+                localStorage.setItem('fireTrackerHistory', JSON.stringify(progressHistory));
                 displayHistory();
             }
         }
