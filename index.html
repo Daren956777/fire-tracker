@@ -164,10 +164,13 @@
             text-align: center;
             line-height: 16px;
             font-size: 12px;
-            cursor: help;
+            cursor: pointer;
             position: relative;
         }
         .info-icon:hover .tooltip {
+            display: block;
+        }
+        .info-icon.active .tooltip {
             display: block;
         }
         .tooltip {
